@@ -1,5 +1,3 @@
-// kakao: f5e94639c51068bb78f9eea7615e5438
-// openweather: 82e763017b19656aafcaafe53c6362b1
 
 // function a(arg, arg2) {}
 // arguments, parameters, 인자, 매개변수 ...
@@ -12,7 +10,7 @@
 
 // AJAX 통신
 /*
-var url = 'https://api.openweathermap.org/data/2.5/onecall?lat=38&lon=127&appid=02efdd64bdc14b279bc91d9247db4722&units=metric&exclude=minutely,hourly';
+var url = 'https://api.openweathermap.org/data/2.5/onecall?lat=38&lon=127&appid=82e763017b19656aafcaafe53c6362b1&units=metric&exclude=minutely,hourly';
 function onGet(r) {
 	console.log(r);
 }
@@ -22,8 +20,10 @@ $("#bt").click(function(){
 });
 */
 
+// openweathermap: 82e763017b19656aafcaafe53c6362b1 (본인거로)
+// kakao: f5e94639c51068bb78f9eea7615e5438 (본인거로)
 
-// 7days: https://api.openweathermap.org/data/2.5/onecall?lat=38&lon=127&appid=02efdd64bdc14b279bc91d9247db4722&units=metric&exclude=minutely,hourly
+// 7days: https://api.openweathermap.org/data/2.5/onecall?lat=38&lon=127&appid=82e763017b19656aafcaafe53c6362b1&units=metric&exclude=minutely,hourly,current
 
 
 // http://openweathermap.org/img/wn/02d.png
@@ -202,9 +202,11 @@ function onGetWeekly(r) {
 	*/
 }
 
-
-
 /****************** 사용자함수 *******************/
+
+/* 
+ */
+
 
 function updateDaily(r) {
 	var $city = $(".daily-container .city");
@@ -223,8 +225,6 @@ function updateDaily(r) {
 	$infoWrap.find(".wind .info").html(r.wind.speed+'㎧');
 	$infoWrap.find(".date .title").html(moment(r.dt*1000).format('YYYY년 M월 D일 H시 m분')+' 기준');
 }
-
-
 
 function getWeather(param, param2) {
 	if(param && param2) {
